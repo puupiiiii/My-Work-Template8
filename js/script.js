@@ -100,7 +100,30 @@ $(function(){
     })
   });
 
+  // add count to plugin to section statistics
+  $('.stats .stats-box .firstN').countTo({
+    from: 0,
+    to: 624,
+    speed: 5000
+  });
 
+  $('.stats .stats-box .secondN').countTo({
+    from: 0,
+    to: 112,
+    speed: 3000
+  });
+
+  $('.stats .stats-box .thirdN').countTo({
+    from: 0,
+    to: 595,
+    speed: 5000
+  });
+
+  $('.stats .stats-box .fourthN').countTo({ 
+    from: 0,
+    to: 9,
+    speed: 2000
+  });
 
 
 
