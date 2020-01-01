@@ -22,6 +22,7 @@ $(function(){
       $(window).scrollTop() >= navbar.height() ? navbar.css('background-color' , '#ffffffde') : navbar.css('background-color' , '#fff');
 
       $(window).scrollTop() >= upperBar.height() ? upperBar.css('background-color' , '#08526dc7') : upperBar.css('background-color' , '#08526d');
+
     });
 
 
@@ -101,37 +102,71 @@ $(function(){
   });
 
   // add count to plugin to section statistics
-  $('.stats .stats-box .firstN').countTo({
-    from: 0,
-    to: 624,
-    speed: 5000
+  // if($(window).scrollTop() >= $('.stats').offset().top) {
+
+  //   $('.stats .stats-box .firstN').countTo({
+  //     from: 0,
+  //     to: 624,
+  //     speed: 5000
+  //   });
+  
+  //   $('.stats .stats-box .secondN').countTo({
+  //     from: 0,
+  //     to: 112,
+  //     speed: 3000
+  //   });
+  
+  //   $('.stats .stats-box .thirdN').countTo({
+  //     from: 0,
+  //     to: 595,
+  //     speed: 5000
+  //   });
+  
+  //   $('.stats .stats-box .fourthN').countTo({ 
+  //     from: 0,
+  //     to: 9,
+  //     speed: 3000
+  //   });
+
+  // }
+
+
+
+  $(window).scroll(function(){
+
+    //count to
+    if($(window).scrollTop() >= $('.stats').offset().top - 150) {
+
+      $('.stats .stats-box .firstN').countTo({
+        from: 0,
+        to: 624,
+        speed: 5000
+      });
+    
+      $('.stats .stats-box .secondN').countTo({
+        from: 0,
+        to: 112,
+        speed: 3000
+      });
+    
+      $('.stats .stats-box .thirdN').countTo({
+        from: 0,
+        to: 595,
+        speed: 5000
+      });
+    
+      $('.stats .stats-box .fourthN').countTo({ 
+        from: 0,
+        to: 9,
+        speed: 3000
+      });
+
+
+    }
+
   });
-
-  $('.stats .stats-box .secondN').countTo({
-    from: 0,
-    to: 112,
-    speed: 3000
-  });
-
-  $('.stats .stats-box .thirdN').countTo({
-    from: 0,
-    to: 595,
-    speed: 5000
-  });
-
-  $('.stats .stats-box .fourthN').countTo({ 
-    from: 0,
-    to: 9,
-    speed: 2000
-  });
-
-
-
-
 
 
   
 });
 
-
-  
